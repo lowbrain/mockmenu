@@ -92,3 +92,29 @@ $ npm i vite-plugin-pwa -D
 
 2.3 プラグインの設定２（[参考](https://vite-pwa-org.netlify.app/guide/faq.html#ide-errors-cannot-find-module-ts2307)）
 > [ts.config.app.json](tsconfig.app.json)
+
+### 3.Vuetifyを導入
+
+3.1 Vuetifyのインストール（[参考](https://vuetifyjs.com/en/getting-started/installation/#manual-steps)）
+
+```sh
+$ npm i vuetify@latest
+```
+
+3.2 プラグインのインストール([参考](https://vuetifyjs.com/en/features/treeshaking/#automatic-treeshaking))
+
+```sh
+npm i vite-plugin-vuetify -D
+```
+
+3.3 アイコンフォントのインストール（[参考](https://vuetifyjs.com/en/features/icon-fonts/#material-design-icons-js-svg)）
+
+```sh
+npm i @mdi/js -D
+```
+
+3.4 Vuetifyの設定
+
+> [vite.config.ts](vite.config.ts)
+> [src/vuetify](src/index.ts)
+> [src/main.ts](src/main.ts)

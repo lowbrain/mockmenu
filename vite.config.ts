@@ -3,6 +3,8 @@ import { fileURLToPath, URL } from 'node:url'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
+import vuetify from 'vite-plugin-vuetify'
+
 import { VitePWA } from 'vite-plugin-pwa'
 const pwacnf = {
   devOptions: { enabled: true }
@@ -12,7 +14,8 @@ const pwacnf = {
 export default defineConfig({
   plugins: [
     vue(),
-    VitePWA(pwacnf)
+    VitePWA(pwacnf),
+    vuetify()
   ],
   resolve: {
     alias: {
