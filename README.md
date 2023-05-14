@@ -115,6 +115,11 @@ npm i @mdi/js -D
 
 3.4 Vuetifyの設定
 
-> [vite.config.ts](vite.config.ts)
-> [src/vuetify](src/index.ts)
-> [src/main.ts](src/main.ts)
+- [vite.config.ts](vite.config.ts)
+- [src/vuetify](src/vuetify/index.ts)
+- [src/main.ts](src/main.ts)
+- [tsconfig.app.json](tsconfig.app.json)（[一部問題](https://github.com/vuejs/tsconfig/blob/v0.4.0/README.md#migrating-from-typescript--50)があり追加で編集）
+  - vuetify3.3 だと改善されるかもだがそれまでは以下コマンドで初期プロジェクトを構築したほうがいいかも
+  ```sh
+  npm init vue@3.6.1
+  ```

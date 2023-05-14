@@ -5,12 +5,13 @@
   "compilerOptions": {
     "composite": true,
     "baseUrl": ".",
-    "moduleResolution": "Node",
     "paths": {
       "@/*": ["./src/*"]
     },
     "types": [
       "vite-plugin-pwa/client"
-    ]
+    ],
+    // https://github.com/vuejs/tsconfig/blob/v0.4.0/README.md
+    "resolvePackageJsonExports": false
   }
 }
