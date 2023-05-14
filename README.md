@@ -49,6 +49,8 @@ npm run lint
 
 ### 1. 初期プロジェクトの作成
 
+https://ja.vuejs.org/guide/quick-start.html
+
 ```sh
 $ npm init vue@latest
 Need to install the following packages:
@@ -68,10 +70,25 @@ Vue.js - The Progressive JavaScript Framework
 ✔ Add Prettier for code formatting? … Yes
 ```
 
-### 2. プロジェクトの初期設定
 ```sh
 $ npm install
+```
+```sh
 $ npm run format
+```
+```sh
 $ npm run dev
 ```
 
+### 2.PWA用のPluginを導入
+
+2.1 プラグインのインストール（[参考](https://vite-pwa-org.netlify.app/guide/#installing-vite-plugin-pwa)）
+```sh
+$ npm i vite-plugin-pwa -D
+```
+
+2.2 プラグインの設定１（[参考](https://vite-pwa-org.netlify.app/guide/#configuring-vite-plugin-pwa)）
+> [vite.config.ts](vite.config.ts)
+
+2.3 プラグインの設定２（[参考](https://vite-pwa-org.netlify.app/guide/faq.html#ide-errors-cannot-find-module-ts2307)）
+> [ts.config.app.json](tsconfig.app.json)
