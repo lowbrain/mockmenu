@@ -9,6 +9,8 @@ console.log(`import.meta.env.DEV:${import.meta.env.DEV}`)
 console.log(`import.meta.env.VITE_APP_TITLE:${import.meta.env.VITE_APP_TITLE}`)
 console.log(`import.meta.env.VITE_APP_VERSION:${import.meta.env.VITE_APP_VERSION}`)
 console.log(`import.meta.env.VITE_APP_BUILDTS:${import.meta.env.VITE_APP_BUILDTS}`)
+const version = import.meta.env.VITE_APP_VERSION
+const buildts = import.meta.env.VITE_APP_BUILDTS
 </script>
 
 <template>
@@ -26,6 +28,14 @@ console.log(`import.meta.env.VITE_APP_BUILDTS:${import.meta.env.VITE_APP_BUILDTS
   </header>
 
   <RouterView />
+  <div class="d-flex justify-space-between mb-6">
+    <v-sheet class="align-self-center text-left">left</v-sheet>
+    <v-sheet class="align-self-center text-center">center</v-sheet>
+    <v-sheet class="align-self-center text-right">
+      v{{ version }}
+      <v-tooltip activator="parent" location="top end">{{ buildts }}</v-tooltip>
+    </v-sheet>
+  </div>
 </template>
 
 <style scoped>
