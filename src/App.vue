@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
+import * as tst from './AsyncTest'
 
 console.log(`import.meta.env.MODE:${import.meta.env.MODE}`)
 console.log(`import.meta.env.BASE_URL:${import.meta.env.BASE_URL}`)
@@ -11,6 +12,12 @@ console.log(`import.meta.env.VITE_APP_VERSION:${import.meta.env.VITE_APP_VERSION
 console.log(`import.meta.env.VITE_APP_BUILDTS:${import.meta.env.VITE_APP_BUILDTS}`)
 const version = import.meta.env.VITE_APP_VERSION
 const buildts = import.meta.env.VITE_APP_BUILDTS
+
+const test = async () => {
+  console.log("start")
+  await tst.testFunc()
+  console.log("end")
+}
 </script>
 
 <template>
@@ -23,6 +30,7 @@ const buildts = import.meta.env.VITE_APP_BUILDTS
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
+        <a href="#" @click="test">test</a>
       </nav>
     </div>
   </header>
